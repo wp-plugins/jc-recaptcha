@@ -33,10 +33,13 @@ This captcha can be used for login, registration, comments forms.
 == Screenshots ==
 
 1. JC REcaptcha Settings page.
-2. Clave Google Recaptcha
+2. Clave Google jc Recaptcha
 3. JC REcaptcha Settings page paste clave.
-4. Result comment Recaptcha
-5. Result login Recaptcha
+4. Result comment jc Recaptcha
+5. Result login jc Recaptcha
+6. Result register jc Recaptcha
+7. Result ninja form jc Recaptcha
+8. Add fields ninja form
 
 == Changelog ==
 
