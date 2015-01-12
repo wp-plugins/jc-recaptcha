@@ -22,7 +22,7 @@ This captcha can be used for login, registration, comments forms.
 
 == Installation ==
 
-1. Upload the `add_new_recaptcha_google` folder to the `/wp-content/plugins/` directory.
+1. Upload the `jc-recaptcha` folder to the `/wp-content/plugins/` directory.
 2. Activate the plugin via the 'Plugins' menu in WordPress.
 3. Plugin settings are located in "RECAPTCHA settings".
 
