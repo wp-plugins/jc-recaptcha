@@ -138,5 +138,4 @@ function jc_recatcha_settings_page() {
 		$id=  esc_attr( get_option("new_option_name") );
 		echo '<div class="g-recaptcha jc" data-sitekey="'.$id.'"></div>';
 	}
-
 	?>
