@@ -138,4 +138,11 @@ function jc_recatcha_settings_page() {
 		$id=  esc_attr( get_option("new_option_name") );
 		echo '<div class="g-recaptcha jc" data-sitekey="'.$id.'"></div>';
 	}
+	add_filter('wpcf7_form_elements', 'mifuncion_wpcf7_form_elements');
+	function mifuncion_wpcf7_form_elements($form){
+		$form = do_shortcode($form);
+		$id=  esc_attr( get_option("new_option_name") );
+		echo '<div class="g-recaptcha jc wp7" data-sitekey="'.$id.'"></div>';
+		return $form;
+	}
 	?>
