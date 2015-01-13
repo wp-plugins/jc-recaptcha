@@ -3,7 +3,7 @@
 Plugin Name: JC REcaptcha
 Plugin URI: http://webdesignjc.com/recaptchawp/index.html
 Description: The Add new recaptcha google plugin allows you to implement a super security REcaptcha form into web forms.
-Version: 1:001
+Version: 1.2
 Author: Julio Cesar LLavilla Ccama
 Autor URI: http://webdesignjc.com/
 License: GPL2
@@ -24,7 +24,11 @@ if(get_option('register_form') !== ""){add_action( 'register_form', 'reCAPTCHA_a
 
 
 if(get_option('ninja_form') !== ""){add_action( 'ninja_form', 'jcrecaptchacont' );}
+
 if(get_option('ninja_form') !== ""){add_action( 'init', 'jc_ninja_form_fields' );}
+
+
+if(get_option('cf7_form') !== ""){add_filter('wpcf7_form_elements', 'mifuncion_wpcf7_form_elements');}
 
 
 
@@ -42,6 +46,7 @@ function jc_register_mysettings_re() {
 	register_setting( 'jc-settings-re', 'login_form' );
 	register_setting( 'jc-settings-re', 'register_form' );
 	register_setting( 'jc-settings-re', 'ninja_form' );
+	register_setting( 'jc-settings-re', 'cf7_form' );
 }
 function jc_recatcha_settings_page() {
 	?>
@@ -73,11 +78,14 @@ function jc_recatcha_settings_page() {
 						if(get_option('login_form') !== ""){ $checked2 = "checked=\"checked\""; }else{ $checked = "";}
 						if(get_option('register_form') !== ""){ $checked3 = "checked=\"checked\""; }else{ $checked = "";}
 						if(get_option('ninja_form') !== ""){ $checked4 = "checked=\"checked\""; }else{ $checked = "";}
+						if(get_option('cf7_form') !== ""){ $checked5 = "checked=\"checked\""; }else{ $checked = "";}
 						?>
 						<input type="checkbox" name="comment_form" id="<?php echo get_option('comment_form'); ?>" value="comment" <?php echo $checked1; ?> />Comment <br>
 						<input type="checkbox" name="login_form" id="<?php echo get_option('login_form'); ?>" value="login" <?php echo $checked2; ?> />Login<br>
 						<input type="checkbox" name="register_form" id="<?php echo get_option('register_form'); ?>" value="register" <?php echo $checked3; ?> />Register<br>
+						<h4>Other Plugin form</h4>
 						<input type="checkbox" name="ninja_form" id="<?php echo get_option('ninja_form'); ?>" value="ninja" <?php echo $checked4; ?> />Ninja Form<br>
+						<input type="checkbox" name="cf7_form" id="<?php echo get_option('cf7_form'); ?>" value="cf7" <?php echo $checked5; ?> />Contact Form 7<br>
 					</td>
 				</tr>
 			</table>
@@ -138,7 +146,7 @@ function jc_recatcha_settings_page() {
 		$id=  esc_attr( get_option("new_option_name") );
 		echo '<div class="g-recaptcha jc" data-sitekey="'.$id.'"></div>';
 	}
-	add_filter('wpcf7_form_elements', 'mifuncion_wpcf7_form_elements');
+	
 	function mifuncion_wpcf7_form_elements($form){
 		$form = do_shortcode($form);
 		$id=  esc_attr( get_option("new_option_name") );

@@ -40,6 +40,7 @@ This captcha can be used for login, registration, comments forms.
 6. Result register jc Recaptcha
 7. Result ninja form jc Recaptcha
 8. Add fields ninja form
+9. Result Contact form 7 jc Recaptcha
 
 == Changelog ==
 
