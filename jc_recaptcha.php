@@ -15,23 +15,12 @@ add_action('admin_menu', 'jc_baw_create_menu');
 add_action( 'login_enqueue_scripts', 'jc_scripts_method' );
 add_action( 'wp_enqueue_scripts', 'jc_scripts_method' );
 add_action( 'admin_enqueue_scripts', 'jc_scripts_method' );
-
-
-
 if(get_option('comment_form') !== ""){add_action( 'comment_form', 'reCAPTCHA_add' );}				
 if(get_option('login_form') !== ""){add_action( 'login_form', 'reCAPTCHA_add' ); }
 if(get_option('register_form') !== ""){add_action( 'register_form', 'reCAPTCHA_add' );}
-
-
 if(get_option('ninja_form') !== ""){add_action( 'ninja_form', 'jcrecaptchacont' );}
-
 if(get_option('ninja_form') !== ""){add_action( 'init', 'jc_ninja_form_fields' );}
-
-
 if(get_option('cf7_form') !== ""){add_filter('wpcf7_form_elements', 'mifuncion_wpcf7_form_elements');}
-
-
-
 function jc_baw_create_menu() {
 	//create new top-level menu
 	add_menu_page('RECAPTCHA Plugin Settings', 'RECAPTCHA  Settings', 'administrator', __FILE__, 'jc_recatcha_settings_page',plugins_url('/images/icon.png', __FILE__));
@@ -108,7 +97,6 @@ function jc_recatcha_settings_page() {
 		wp_enqueue_script( 'jcscripts', plugins_url( '/js/jcscript.js', __FILE__ ),array( 'jquery' ) );
 	}
 	?>
-
 	<?php 
 	function jc_ninja_form_fields() {
 		$argsjc = array(
@@ -146,7 +134,6 @@ function jc_recatcha_settings_page() {
 		$id=  esc_attr( get_option("new_option_name") );
 		echo '<div class="g-recaptcha jc" data-sitekey="'.$id.'"></div>';
 	}
-	
 	function mifuncion_wpcf7_form_elements($form){
 		$form = do_shortcode($form);
 		$id=  esc_attr( get_option("new_option_name") );

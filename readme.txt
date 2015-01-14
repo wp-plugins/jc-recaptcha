@@ -1,7 +1,7 @@
 === JC Recaptcha ===
 Contributors: webdesignjc
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=25BYCRDE6D2PW
-Tags: add, antispam, anti-spam, anti-spam security, arithmetic actions, capcha, captcha, captha, catcha, cpatcha, captcha numbers, captcha plugin, captcha words, comment, label, login, lost password, match captcha, math actions, multiply, registration, security, spam, spam protection, substract, text captcha, web form protection
+Tags: recaptcha,nocaptcha,re-captcha,no-captcha,add, antispam, anti-spam, anti-spam security, arithmetic actions, capcha, captcha, captha, catcha, cpatcha, captcha numbers, captcha plugin, captcha words, comment, label, login, lost password, match captcha, math actions, multiply, registration, security, spam, spam protection, substract, text captcha, web form protection
 Requires at least: 3.3
 Tested up to: 4.0.1
 Stable tag: 4.0.7
@@ -12,11 +12,11 @@ The Add new recaptcha google plugin allows you to implement a super security REc
 
 == Description ==
 
-This plugin is based on the recapcha of google, for receive more information can visit the website: https://www.google.com/recaptcha
 
 The Add new recaptcha google plugin allows you to implement a super security REcaptcha form into web forms. It protects your website from spam by means of math logic, easily understood by human beings.
 This captcha can be used for login, registration, comments forms.
 
+This plugin is based on the recapcha of google, for receive more information can visit the website: https://www.google.com/recaptcha
 
 <a href="http://webdesignjc.com/recaptchawp/index.html" target="_blank">Support</a>
 
