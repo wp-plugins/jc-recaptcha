@@ -5,12 +5,13 @@ jQuery(document).ready(function($){
 			$(".g-recaptcha.jc").prepend('<p class="jc-required">Required</p>');
 			event.preventDefault();
 		}else{
-			//window.setTimeout('location.reload()', 5000);
+			window.setTimeout('location.reload()', 500);
+			/*
 			jQuery("form").on('submitResponse', function(e, response){
 				if(typeof grecaptcha!="undefined"){
 					grecaptcha.reset();
 				}
-			});
+			});*/
 		}
 	});
 	$("form.wpcf7-form .wpcf7-submit").parent().prepend($(".g-recaptcha.jc.wp7"));
