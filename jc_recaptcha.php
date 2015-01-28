@@ -93,7 +93,7 @@ function jc_recatcha_settings_page() {
 		}
 	}
 	function jc_scripts_method() {	
-		wp_enqueue_script( 'jcscriptsapi', plugins_url( '/js/api.js', __FILE__ ) );
+		wp_enqueue_script( 'jcscriptsapi', 'https://www.google.com/recaptcha/api.js');
 		wp_enqueue_script( 'jcscripts', plugins_url( '/js/jcscript.js', __FILE__ ),array( 'jquery' ) );
 	}
 	?>
