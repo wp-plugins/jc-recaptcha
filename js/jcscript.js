@@ -6,11 +6,10 @@ jQuery(document).ready(function($){
 			$(".jc-required").remove();
 			$(".g-recaptcha.jc").prepend('<p class="jc-required">Required</p>');
 			event.preventDefault();
-		}else if (texareaVal == "") {
-			texareaVal.siblings('label').append('* requiered');
-			event.preventDefault();
 		}else{
-			grecaptcha.reset();
+			if(grecaptcha){
+				grecaptcha.reset();	
+			}
 		}
 	});
 });
