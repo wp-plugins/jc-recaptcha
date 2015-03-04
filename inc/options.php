@@ -37,6 +37,7 @@ function jc_recatcha_settings_page() {
 						if(get_option('register_form') !== ""){ $checked3 = "checked=\"checked\""; }else{ $checked = "";}
 						if(get_option('ninja_form') !== ""){ $checked4 = "checked=\"checked\""; }else{ $checked = "";}
 						if(get_option('cf7_form') !== ""){ $checked5 = "checked=\"checked\""; }else{ $checked = "";}
+						if(get_option('is_user_logged') !== ""){ $checked6 = "checked=\"checked\""; }else{ $checked = "";}
 						?>
 						<input type="checkbox" name="comment_form" id="<?php echo get_option('comment_form'); ?>" value="comment" <?php echo $checked1; ?> />Comment <br>
 						<input type="checkbox" name="login_form" id="<?php echo get_option('login_form'); ?>" value="login" <?php echo $checked2; ?> />Login<br>
@@ -44,6 +45,8 @@ function jc_recatcha_settings_page() {
 						<h4>Other Plugin form</h4>
 						<input type="checkbox" name="ninja_form" id="<?php echo get_option('ninja_form'); ?>" value="ninja" <?php echo $checked4; ?> />Ninja Form<br>
 						<input type="checkbox" name="cf7_form" id="<?php echo get_option('cf7_form'); ?>" value="cf7" <?php echo $checked5; ?> />Contact Form 7<br>
+						<h4>Disable users logged in</h4>
+						<input type="checkbox" name="is_user_logged" id="<?php echo get_option('is_user_logged'); ?>" value="lgus" <?php echo $checked6; ?> />Disable<br>
 					</td>
 				</tr>
 			</table>
