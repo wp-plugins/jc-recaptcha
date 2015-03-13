@@ -3,7 +3,7 @@
 Plugin Name: JC REcaptcha
 Plugin URI: http://webdesignjc.com/recaptchawp/index.html
 Description: The Add new recaptcha google plugin allows you to implement a super security REcaptcha form into web forms.
-Version: 1.3
+Version: 1.4
 Author: Julio Cesar LLavilla Ccama
 Autor URI: http://webdesignjc.com/
 License: GPL2
