@@ -26,11 +26,18 @@ function jc_ninja_form_fields() {
 			),
 		'req' => true,
 		);
-	ninja_forms_register_field('user_jc', $argsjc);
+	
+	if( function_exists( 'ninja_forms_register_field' ) )
+	{
+		ninja_forms_register_field('user_jc', $argsjc);
+	}
 }
+
 if( function_exists( 'ninja_forms_register_field' ) )
 {
 	add_action('init','jc_ninja_form_fields' );
+}else{
+	echo "error";
 }
 
 function jcrecaptchacont( $field_id, $data, $form_id = '' ){
