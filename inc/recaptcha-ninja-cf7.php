@@ -36,8 +36,6 @@ function jc_ninja_form_fields() {
 if( function_exists( 'ninja_forms_register_field' ) )
 {
 	add_action('init','jc_ninja_form_fields' );
-}else{
-	echo "error";
 }
 
 function jcrecaptchacont( $field_id, $data, $form_id = '' ){
